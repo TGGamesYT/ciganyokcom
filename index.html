@@ -62,23 +62,26 @@
         <p>A cigányok úgy élnek, mintha a világ csak a saját szabályaik szerint működne: lopnak, kéregetnek, hazudnak, isznak, és a meló meg a rend? Na az ritka, hogy náluk előforduljon. Mindig találnak valami gyors meggazdagodós trükköt, vitatkoznak, lármáznak, és mintha a társadalmi normák csak másokra vonatkoznának. A kép elég sarkított, de pont ettől ragadt meg sokaknál: hangosak, mindig valahol zűrben, és mintha mindenki más életét csak figyelnék, miközben a saját útjukat járják.</p>
         <p>Ha komolyabb információ kell, nézd meg a <a href="https://hu.wikipedia.org/wiki/Cig%C3%A1nyok" target="_blank">Wikipédia oldalt</a>.</p>
     </div>
-    <button onclick="toggleLanguage()">English</button>
+    <button onclick="toggleLanguage()" id="gomb">English</button>
 </main>
 
 <script>
 let inEnglish = false;
 function toggleLanguage() {
     const content = document.getElementById('content');
+    const gomb = document.getElementById('gomb')
     if (!inEnglish) {
         content.innerHTML = `<p class="warning">⚠️ If you're Romani, please don't take this seriously! Just a playful, exaggerated stereotype description. 😅</p>
         <p>Gypsies live as if the world only obeyed their own rules: they steal, beg, lie, drink, and working or keeping things tidy? Yeah, hardly ever. They're always up to some quick get-rich trick, arguing, making noise, and acting like society's rules apply to everyone else. The image is exaggerated, but that's exactly why it sticks in people's minds: loud, always in some trouble, and as if watching everyone else's life while following only their own path.</p>
         <p>For more serious info, check out the <a href="https://en.wikipedia.org/wiki/Romani_people" target="_blank">Wikipedia page</a>.</p>`;
         inEnglish = true;
+        gomb.innerHTML = "Magyar";
     } else {
         content.innerHTML = `<p class="warning">⚠️ Ha roma vagy, ne vedd komolyan! Ez csak egy játékos, túlzó, vicces sztereotípiákon alapuló leírás. 😅</p>
         <p>A cigányok úgy élnek, mintha a világ csak a saját szabályaik szerint működne: lopnak, kéregetnek, hazudnak, isznak, és a meló meg a rend? Na az ritka, hogy náluk előforduljon. Mindig találnak valami gyors meggazdagodós trükköt, vitatkoznak, lármáznak, és mintha a társadalmi normák csak másokra vonatkoznának. A kép elég sarkított, de pont ettől ragadt meg sokaknál: hangosak, mindig valahol zűrben, és mintha mindenki más életét csak figyelnék, miközben a saját útjukat járják.</p>
         <p>Ha komolyabb információ kell, nézd meg a <a href="https://hu.wikipedia.org/wiki/Cig%C3%A1nyok" target="_blank">Wikipédia oldalt</a>.</p>`;
         inEnglish = false;
+        gomb.innerHTML = "English";
     }
 }
 </script>
