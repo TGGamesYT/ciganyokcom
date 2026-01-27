@@ -12,7 +12,9 @@
 
   body {
     background: #0b0b0b url('https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.8/blocks/grass_block_side.png') no-repeat center center;
-    background-size: cover; /* Big single image, no tiling */
+    background-size: cover;
+    image-rendering: pixelated;   /* <- THIS keeps pixels sharp */
+    image-rendering: crisp-edges; /* fallback for older browsers */
     color: #f5f5dc;
     font-family: 'Minecraft-Seven', monospace;
     padding: 20px;
